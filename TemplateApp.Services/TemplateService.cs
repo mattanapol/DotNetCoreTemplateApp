@@ -2,6 +2,9 @@
 using System.Threading.Tasks;
 using TemplateApp.Services.Interfaces;
 using TemplateApp.Services.Interfaces.Repositories;
+using TemplateApp.Domain.Models;
+using System.Collections.Generic;
+
 namespace TemplateApp.Services
 {
     public class TemplateService: ITemplateService
@@ -17,9 +20,14 @@ namespace TemplateApp.Services
             return await _templateRepository.GetTemplateData(arg);
         }
 
-        public async Task TemplateServiceMethod2(string arg)
+        public async Task<TemplateModel> TemplateServiceMethod2(string arg)
         {
-            await _templateRepository.PutTemplateData(arg);
+            return await _templateRepository.PutTemplateData(arg);
+        }
+
+        public async Task<List<TemplateModel>> TemplateServiceMethod3()
+        {
+            return await _templateRepository.GetAllTemplateData();
         }
     }
 }

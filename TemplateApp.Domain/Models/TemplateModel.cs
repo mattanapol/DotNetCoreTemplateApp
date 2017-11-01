@@ -3,8 +3,8 @@ namespace TemplateApp.Domain.Models
 {
     public class TemplateModel
     {
-        public TemplateModel()
-        {
-        }
+        public int Id { get; set; }
+
+        public string Content { get; set; }
     }
 }

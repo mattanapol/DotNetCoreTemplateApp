@@ -19,23 +19,26 @@ namespace TemplateApp.WebApi.Controllers
 
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<IActionResult> GetAll()
         {
-            return new string[] { "value1", "value2" };
+            var result = await _templateService.TemplateServiceMethod3();
+            return Ok(result);
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public async Task<string> Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
-            return await _templateService.TemplateServiceMethod(id);
+            string result = await _templateService.TemplateServiceMethod(id);
+            return Ok(result);
         }
 
         // POST api/values
         [HttpPost]
-        public async Task Post([FromBody]string value)
+        public async Task<IActionResult> Post([FromBody]string value)
         {
-            await _templateService.TemplateServiceMethod2(value);
+            var result = await _templateService.TemplateServiceMethod2(value);
+            return Ok(result);
         }
 
         // PUT api/values/5

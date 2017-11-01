@@ -13,6 +13,7 @@ using TemplateApp.DataAccess.Repositories;
 using TemplateApp.Services;
 using TemplateApp.Services.Interfaces;
 using TemplateApp.Services.Interfaces.Repositories;
+using TemplateApp.Common.AutoMapper;
 
 namespace TemplateApp.WebApi
 {
@@ -30,8 +31,14 @@ namespace TemplateApp.WebApi
         {
             services.AddMvc();
 
+            // Common
+            services.AddSingleton<ITypeMappingService,AutoMapperService>();
+
+            // Data Layer
             services.AddScoped<TemplateDbContext>((arg) => { return new TemplateDbContext(Configuration.GetConnectionString("DefaultConnection")); });
             services.AddScoped<ITemplateRepository,TemplateRepository>();
+
+            // Service Layer
             services.AddScoped<ITemplateService,TemplateService>();
         }
 

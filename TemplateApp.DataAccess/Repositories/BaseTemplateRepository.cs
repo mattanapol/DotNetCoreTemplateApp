@@ -1,4 +1,5 @@
 ﻿using System;
+using TemplateApp.Services.Interfaces;
 namespace TemplateApp.DataAccess.Repositories
 {
     public abstract class BaseTemplateRepository
@@ -8,9 +9,12 @@ namespace TemplateApp.DataAccess.Repositories
         /// </summary>
         protected TemplateDbContext DbContext { get; }
 
-        protected BaseTemplateRepository(TemplateDbContext dbContext)
+        protected ITypeMappingService TypeMappingService { get; }
+
+        protected BaseTemplateRepository(TemplateDbContext dbContext, ITypeMappingService typeMappingService)
         {
             DbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
+            TypeMappingService = typeMappingService ?? throw new ArgumentNullException(nameof(typeMappingService));
         }
     }
 }

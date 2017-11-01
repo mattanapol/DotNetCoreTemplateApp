@@ -8,4 +8,7 @@
     <Folder Include="Interfaces\" />
     <Folder Include="Interfaces\Repositories\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TemplateApp.Domain\TemplateApp.Domain.csproj" />
+  </ItemGroup>
 </Project>
