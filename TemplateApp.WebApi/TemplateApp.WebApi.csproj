@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,5 +22,6 @@
     <ProjectReference Include="..\TemplateApp.Services\TemplateApp.Services.csproj" />
     <ProjectReference Include="..\TemplateApp.Common\TemplateApp.Common.csproj" />
     <ProjectReference Include="..\TemplateApp.Domain\TemplateApp.Domain.csproj" />
+    <ProjectReference Include="..\TemplateApp.PdfGenerator\TemplateApp.PdfGenerator.csproj" />
   </ItemGroup>
 </Project>

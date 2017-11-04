@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateApp.Domain", "Templ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateApp.Common", "TemplateApp.Common\TemplateApp.Common.csproj", "{2C05E6EB-5F6D-4025-9F0F-A8A54DE69BFF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateApp.PdfGenerator", "TemplateApp.PdfGenerator\TemplateApp.PdfGenerator.csproj", "{0597547B-8CE5-4862-9B39-78FBA6357331}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,5 +39,9 @@ Global
 		{2C05E6EB-5F6D-4025-9F0F-A8A54DE69BFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C05E6EB-5F6D-4025-9F0F-A8A54DE69BFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C05E6EB-5F6D-4025-9F0F-A8A54DE69BFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0597547B-8CE5-4862-9B39-78FBA6357331}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0597547B-8CE5-4862-9B39-78FBA6357331}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0597547B-8CE5-4862-9B39-78FBA6357331}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0597547B-8CE5-4862-9B39-78FBA6357331}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

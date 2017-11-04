@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TemplateApp.Services\TemplateApp.Services.csproj" />
+    <ProjectReference Include="..\TemplateApp.Domain\TemplateApp.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DinkToPdf" Version="1.0.8" />
+  </ItemGroup>
+</Project>
